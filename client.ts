@@ -1,0 +1,7 @@
+import type {Mission,RouteResponse} from './types';
+export function canonical(value:unknown):string{if(Array.isArray(value))return '['+value.map(canonical).join(',')+']';if(value!==null&&typeof value==='object')return '{'+Object.entries(value).sort(([a],[b])=>a.localeCompare(b)).map(([k,v])=>JSON.stringify(k)+':'+canonical(v)).join(',')+'}';return JSON.stringify(value);}
+export async function api<T>(path:string,body?:unknown,method=body===undefined?'GET':'POST',signal?:AbortSignal):Promise<T>{
+ const r=await fetch('/api/v1/'+path,{method,signal,headers:{'Content-Type':'application/json'},body:body===undefined?undefined:JSON.stringify(body)});
+ if(!r.ok){let d;try{d=await r.json();}catch{throw Error('Server unavailable or invalid response');}throw Error(typeof d.detail==='string'?d.detail:JSON.stringify(d.detail));}return r.json();
+}
+export function compare(m:Mission,signal:AbortSignal){return api<RouteResponse>('routes/compare',{base:{x:m.base[0],y:m.base[1]},destination_site_id:m.required[0],via_site_ids:m.sites.filter(id=>id!==m.required[0]),ordered_site_ids:m.sites,scenario:{duration_min:m.available_min,reserve_min:m.reserve_min,observation_min:m.observation_min,nominal_speed_m_s:m.speed_m_min/60,max_slope_deg:m.max_slope,is_simulated:true},criteria:['distance','estimated_time','slope_cost'],slope_weight:m.slope_weight,visibility_factor:m.visibility_factor,blocked:m.blocked},'POST',signal);}

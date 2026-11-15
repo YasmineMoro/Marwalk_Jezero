@@ -1,0 +1,1 @@
+WMTS HiRISE niveau 17 · 9/9 tuiles chargées · 0 absentes · maille servie ~0.32 m nord-sud. Cache local conservé; pas de détail inventé.

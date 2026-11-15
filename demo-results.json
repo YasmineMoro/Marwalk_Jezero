@@ -1,0 +1,113 @@
+{
+  "eva_id": "694f0bde-2d99-4916-937b-d727a372cfd5",
+  "model": "mars-grid-2.1-native-edges",
+  "dataset": "70dbfd4583136f8f",
+  "compare_http_ms": [
+    5673.413799988339,
+    181.35450000409037,
+    196.74139999551699
+  ],
+  "initial_routes": [
+    {
+      "criteria": [
+        "distance"
+      ],
+      "distance_m": 1012.4560873907203,
+      "travel_min": 32.61306074652539,
+      "total_min": 42.61306074652539,
+      "margin_min": 57.38693925347461,
+      "calculation_ms": 36.16459999466315
+    },
+    {
+      "criteria": [
+        "estimated_time"
+      ],
+      "distance_m": 1018.2594666807087,
+      "travel_min": 32.51156168648081,
+      "total_min": 42.51156168648081,
+      "margin_min": 57.4884383135192,
+      "calculation_ms": 39.910799998324364
+    },
+    {
+      "criteria": [
+        "slope_cost"
+      ],
+      "distance_m": 1035.3015148680497,
+      "travel_min": 34.21840849048762,
+      "total_min": 44.21840849048762,
+      "margin_min": 55.78159150951238,
+      "calculation_ms": 41.87180000008084
+    }
+  ],
+  "opportunity": {
+    "site": "A",
+    "order": [
+      "C",
+      "A"
+    ],
+    "extra_m": 200.9686066136029,
+    "extra_min": 17.698209515907145,
+    "extra_travel_min": 7.698209515907145,
+    "extra_observation_min": 10.0,
+    "proximity_m": 96.73302353400946,
+    "feasible": true,
+    "remaining_min": 59.790228797612045,
+    "margin_min": 39.790228797612045
+  },
+  "with_stop": {
+    "sites": [
+      "C",
+      "A"
+    ],
+    "distance_m": 1219.2280732943116,
+    "total_min": 60.209771202387955,
+    "margin_min": 39.790228797612045
+  },
+  "progress_before_event": {
+    "simulation": true,
+    "fraction": 0.2,
+    "phase": "walking",
+    "position": [
+      477.5,
+      -763.9574606827492
+    ],
+    "direction_deg": 180.0,
+    "elapsed_min": 12.041954240477592,
+    "remaining_distance_m": 844.4956921669962,
+    "remaining_plan_min": 48.16781696191036,
+    "completed_sites": [],
+    "remaining_sites": [
+      "C",
+      "A"
+    ],
+    "next_site": "C",
+    "remaining_observation_min": 0.0,
+    "reserve_after_plan_min": 59.790228797612045,
+    "immediate_return_min": 11.752359153013124,
+    "return_reserve_min": 96.20568660650929
+  },
+  "adaptation": "no path explicitly reported; simulated blockage explicitly lifted to continue the demonstration",
+  "final": {
+    "simulation": true,
+    "fraction": 1.0,
+    "phase": "completed",
+    "position": [
+      622.5,
+      -452.5
+    ],
+    "direction_deg": null,
+    "elapsed_min": 77.34538642574626,
+    "remaining_distance_m": 0,
+    "remaining_plan_min": 0,
+    "completed_sites": [
+      "C",
+      "A"
+    ],
+    "remaining_sites": [],
+    "next_site": "base",
+    "remaining_observation_min": 0.0,
+    "reserve_after_plan_min": 42.654613574253744,
+    "immediate_return_min": 0.0,
+    "return_reserve_min": 42.654613574253744
+  }
+}

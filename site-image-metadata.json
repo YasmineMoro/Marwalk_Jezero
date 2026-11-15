@@ -1,0 +1,5 @@
+{
+  "A": {"instrument":"Mastcam-Z", "figure":"Figure 5, Swift Run report, PDF page 24", "sols":[466,492], "sequences":["zcam08486 Z110","zcam08517 Z034"], "processing":"Enhanced colour; context panorama and workspace.","ground_location":"Outcrop identified in the figure; individual pixels are not independently geolocated."},
+  "B": {"instrument":"Mastcam-Z", "figure":"Figure 5, Hazeltop report, PDF page 68", "sols":[513], "sequences":["zcam08537 Z110"], "processing":"Enhanced colour; workspace after sampling.","ground_location":"Wildcat Ridge according to the caption; pixels are not geolocated."},
+  "C": {"instrument":"Mastcam-Z", "figure":"Figure 5, Shuyak report, PDF page 109", "sols":[557,565,582], "sequences":["zcam08578 Z110","zcam07101 Z110","zcam08595 Z063"], "processing":"Enhanced colour; context, before and after abrasion/sampling.","ground_location":"Amalik according to the caption; pixels are not geolocated."}
+}

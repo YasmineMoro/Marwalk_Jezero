@@ -1,0 +1,41 @@
+{
+  "body": "Mars",
+  "coordinate_system": "local_meters",
+  "axes": {
+    "x": "east",
+    "y": "north",
+    "z": "up"
+  },
+  "origin_projected_m": [
+    4351286.0,
+    1094535.0
+  ],
+  "extent_local_m": [
+    0,
+    -1300,
+    1200,
+    0
+  ],
+  "extent_lonlat_mars": [
+    77.39382534567157,
+    18.443535702061588,
+    77.41516905656873,
+    18.46546748837714
+  ],
+  "crs_wkt": "PROJCS[\"EQUIRECTANGULAR MARS\",GEOGCS[\"GCS_MARS\",DATUM[\"D_MARS\",SPHEROID[\"MARS_localRadius\",3396190,0]],PRIMEM[\"Reference_Meridian\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Equirectangular\"],PARAMETER[\"standard_parallel_1\",18.4663],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+  "formula": "x_local=x_projected-origin_x; y_local=y_projected-origin_y",
+  "geology_registration": "UNREGISTERED_100_200M",
+  "base_landing": null,
+  "routing_extent": "DEM valid cells only",
+  "paths": {
+    "terrain": "terrain_grid.json",
+    "texture": "terrain_texture.png",
+    "sites": "sites.json",
+    "geology": "geology_local.json"
+  },
+  "id": "jezero-west-delta",
+  "justification": "Intersection DEM PLACES valide, extraits HiRISE/CTX et polygones SIM3464; trois pr\u00e9l\u00e8vements publi\u00e9s dans la zone.",
+  "registration_warning": "G\u00e9ologie non recal\u00e9e : 100\u2013200 m. Mars Trek/PLACES : erreur non quantifi\u00e9e.",
+  "grid_step_m": 5,
+  "native_dem_m": 1
+}

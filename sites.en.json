@@ -1,0 +1,21 @@
+{
+  "A": {
+    "roche": "Fine- to medium-grained sandstone",
+    "interpretation": "Prodelta sedimentary deposit with grains from different source materials.",
+    "observation": "Photograph the layers and compare the grains with the other two sites.",
+    "position_type": "Sample coordinates published in 2022/2023; registration is required for precise navigation."
+  },
+  "B": {
+    "roche": "Fine-grained, sulfate-bearing sedimentary rock",
+    "interpretation": "Likely lake deposit; sulfates and changes associated with ancient water.",
+    "observation": "Compare grain size, layers and veins; document a location for further analysis.",
+    "position_type": "Sample coordinates published in 2022/2023; registration is required for precise navigation."
+  },
+  "C": {
+    "unite": "Enchanted Lake / Amalik (report terminology)",
+    "roche": "Fine-grained, olivine-bearing sedimentary rock",
+    "interpretation": "Likely lake deposit; olivine and alteration products provide a comparison with Wildcat Ridge.",
+    "observation": "Compare fine-grained rocks and explain why chemical analyses complement images.",
+    "position_type": "Sample coordinates published in 2022/2023; registration is required for precise navigation."
+  }
+}

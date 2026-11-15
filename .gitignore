@@ -1,0 +1,19 @@
+.deps/
+__pycache__/
+*.pyc
+.pytest_cache/
+data/
+runtime/*.sqlite*
+runtime/*.part
+.env
+frontend/node_modules/
+runtime/uploads/
+
+# Local environments, credentials and private keys
+.env.*
+!.env.example
+.venv/
+venv/
+node_modules/
+*.pem
+*.key

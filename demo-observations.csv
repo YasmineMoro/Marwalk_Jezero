@@ -1,0 +1,2 @@
+id,site,note,category,status,simulated_min,image,sample_id,position,created_at,validation_status,x_local_m,y_local_m,coordinate_system
+b99dae93-93ef-485b-9427-909c1f49066a,,Question about layering: unverified user observation at a manually selected point.,geology,observed (simulation),0.0,,,"[600.0, -650.0]",2026-11-15T22:04:40.488081+00:00,user_unverified,600.0,-650.0,"Mars local metres; x east; y north; origin (4351286,1094535) projected m"

@@ -1,0 +1,15 @@
+export type Point=[number,number];
+export type Criterion='distance'|'estimated_time'|'slope_cost';
+export interface Mission {name:string;base:Point;sites:string[];required:string[];available_min:number;reserve_min:number;speed_m_min:number;observation_min:number;max_slope:number;slope_weight:number;blocked:Point[];elapsed_min:number;criterion:Criterion;visibility_factor:number;start:Point|null;completed_sites:string[];observation_overrides:Record<string,number>}
+export interface Site {id:string;name:string;position:{x:number;y:number};elevation_m:number;source_url:string;image_path:string;echantillon:string;sol:number;date:string;roche:string;interpretation:string;observation:string;latitude:number;longitude:number;marker_status:string;image_metadata:{sols:number[];sequences:string[];processing:string}}
+export interface Route {geometry:{type:'LineString';coordinates:Point[]};elevations_m:number[];profile:{distance_m:number;elevation_m:number}[];surface_m:number;horizontal_m:number;travel_min:number;observation_min:number;total_min:number;remaining_min:number;margin_min:number;outbound_m:number;return_m:number;return_min:number;ascent_m:number;descent_m:number;max_local_slope_deg:number;mean_local_slope_deg:number;feasible:boolean;parameters:Mission;model:string;dataset_version:string;calculation_ms:number;criterion:Criterion;example_segment:{horizontal_m:number;delta_h_m:number;slope_deg:number}|null;legs:{start_index:number;end_index:number;surface_m:number;travel_min:number;target_site:string|null;observation_min:number}[]}
+export interface RouteResponse {routes:{id:string;criteria:Criterion[];roundtrip_points:{x:number;y:number}[];metrics:{distance_roundtrip_m:number;travel_roundtrip_min:number;observation_min:number;remaining_after_reserve_min:number};details:Route}[];no_route_reason:string|null;dataset_version:string;model_version:string;warnings:string[];assumptions:unknown}
+export interface Observation {id:string;site:string|null;note:string;category:string;position:Point;created_at:string;simulated_min:number;image:string|null;validation_status:string}
+export interface Progress {fraction:number;phase:string;position:Point;elapsed_min:number;remaining_distance_m:number;remaining_plan_min:number;completed_sites:string[];next_site:string;immediate_return_min:number|null;return_reserve_min:number|null;direction_deg:number|null}
+export interface Eva {id:string;mission:Mission;route:Route|null;observations:Observation[];progress?:Progress;route_error?:string;simulation_started?:boolean}
+export interface MissionSummary {id:string;mission:Mission;observation_count?:number}
+export interface Grid {width:number;height:number;spacing_m:number;first_sample_local_m:Point;heights_m:number[][]}
+export interface Feature {id?:string;geometry:{type:string;coordinates:any};properties:Record<string,any>}
+export interface Geo {type:string;features:Feature[]}
+export interface View {cx:number;cy:number;width:number}
+export interface Layers {basemap:string;slope:boolean;geology:boolean;history:boolean;observations:boolean;opacity:number;online:boolean}
